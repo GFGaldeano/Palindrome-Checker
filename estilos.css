@@ -1,0 +1,88 @@
+/* Fondo con degradado */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilos para el título */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input de texto */
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 400px;
+    border: 2px solid #764ba2;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0px 0px 10px rgba(102, 126, 234, 0.5);
+}
+
+/* Botón con animación */
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #764ba2;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(118, 75, 162, 0.5);
+}
+
+/* Mensaje de resultado */
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
